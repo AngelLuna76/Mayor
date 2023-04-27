@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Comparador de números</title>
+</head>
+<script>
+function compararNumeros() {
+    let num1 = document.getElementById("num1").value;
+    let num2 = document.getElementById("num2").value;
+
+    if (num1 && num2) {
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+
+        if (num1 > num2) {
+            alert(`${num1} es mayor que ${num2}`);
+        } else if (num2 > num1) {
+            alert(`${num2} es mayor que ${num1}`);
+        } else {
+            alert("Los dos números son iguales");
+        }
+    } else {
+        alert("No se han introducido números");
+    }
+}
+</script>
+<body>
+	<center>
+	<h1>Comparador de números</h1>
+	<label for="num1">Introduce el número primero:</label>
+	<input type="text" id="num1"><br><br>
+	<label for="num2">Introduce el número segundo:</label>
+	<input type="text" id="num2"><br><br>
+	<button onclick="compararNumeros()">Comparar números</button>
+</center>
+</body>
+</html>
